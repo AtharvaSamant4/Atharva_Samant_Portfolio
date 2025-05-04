@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantGuard Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ec4b6;
+            --secondary: #cbf3f0;
+            --dark: #0a2342;
+            --light: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: var(--dark);
+        }
+
+        .navbar {
+            background: rgba(10, 35, 66, 0.95) !important;
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all 0.3s;
+        }
+
+        .project-detail {
+            padding: 6rem 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            margin: 0.3rem;
+            display: inline-block;
+        }
+
+        .feature-list li {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(46, 196, 182, 0.3);
+        }
+
+        .back-btn {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary), var(--dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Performance Metrics */
+.alert-primary {
+    background: rgba(46, 196, 182, 0.15) !important;
+    border-color: var(--primary);
+}
+
+/* Workflow Cards */
+.workflow-step {
+    border-left: 3px solid var(--primary);
+    padding-left: 1rem;
+}
+
+/* Chart Container */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+/* Limitation List */
+.feature-list li {
+    font-size: 0.95rem;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Atharva Samant</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-detail">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <div class="glass-card p-5">
+                        <h1 class="project-title gradient-text" data-aos="fade-right">PlantGuard 🌱</h1>
+                        
+                        <div class="mb-5" data-aos="fade-left">
+                            <h3 class="h4 text-muted mb-3">AI-Powered Plant Disease Detection</h3>
+                            <div class="d-flex flex-wrap">
+                                <span class="tech-badge">Deep Learning</span>
+                                <span class="tech-badge">Keras</span>
+                                <span class="tech-badge">Flask</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-5" data-aos="fade-up">
+                            <h2 class="h3 mb-4 text-dark">Project Overview</h2>
+                            <p class="lead">
+                                Developed a CNN-based solution for detecting diseases in 11 different crops 
+                                with 94% accuracy. Integrated real-time weather data analysis to provide 
+                                preventive recommendations.
+                            </p>
+                        </div>
+
+                        <div class="row mb-5" data-aos="fade-up">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h3 class="h4 mb-3 text-primary">Key Features</h3>
+                                        <ul class="feature-list">
+                                            <li>Image classification using ResNet-50</li>
+                                            <li>Weather API integration</li>
+                                            <li>Farmer-friendly web interface</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <h3 class="h4 mb-3 text-primary">Technologies</h3>
+                                        <ul class="feature-list">
+                                            <li>Python</li>
+                                            <li>TensorFlow</li>
+                                            <li>OpenCV</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- After Technologies Section -->
+<!-- Add this after the Technologies section -->
+<div class="row mb-5" data-aos="fade-up">
+    <div class="col-md-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="h4 mb-4 text-primary text-center">Project Highlights</h3>
+
+                
+                <!-- Problem Statement -->
+                <div class="mb-4">
+                    <h5 class="text-dark mb-3">🔍 The Challenge</h5>
+                    <ul class="feature-list">
+                        <li>Manual disease detection is time-consuming (5-7 days for expert diagnosis)</li>
+                        <li>30-40% crop loss due to late disease identification</li>
+                        <li>Limited expert access for 73% small-scale farmers</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Specifications -->
+                <div class="mb-4">
+                    <h5 class="text-dark mb-3">⚙️ Technical Core</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-light">
+                                <h6>Model Architecture</h6>
+                                <ul class="mb-0">
+                                    <li>ResNet50 with 23M parameters</li>
+                                    <li>3-stage verification pipeline</li>
+                                    <li>Weather data integration layer</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-light">
+                                <h6>Performance Metrics</h6>
+                                <ul class="mb-0">
+                                    <li>98.2% leaf detection accuracy</li>
+                                    <li>94.5% plant classification accuracy</li>
+                                    <li>79.8% disease prediction accuracy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Pipeline -->
+                <div class="mb-4">
+                    <h5 class="text-dark mb-3">📊 Data Ecosystem</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="tech-badge">
+                            <i class="fas fa-database me-2"></i>54,305 images
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-leaf me-2"></i>11 plant species
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-cloud-sun me-2"></i>Weather API
+                        </div>
+                        <div class="tech-badge">
+                            <i class="fas fa-robot me-2"></i>Gemini AI
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Metrics -->
+                <!-- <div class="alert alert-primary">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="h2 mb-0">10s</div>
+                            <small>Diagnosis Time</small>
+                        </div>
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="h2 mb-0">3x</div>
+                            <small>Faster than manual</small>
+                        </div>
+                        <div class="col-md-3 mb-3 mb-md-0">
+                            <div class="h2 mb-0">89%</div>
+                            <small>User Satisfaction</small>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="h2 mb-0">40%</div>
+                            <small>Crop Loss Prevented</small>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Implementation Workflow -->
+<div class="row mb-5" data-aos="fade-up">
+    <div class="col-md-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h3 class="h4 mb-4 text-primary text-center">⚡️ Workflow Architecture</h3>
+            
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="p-3 alert alert-light h-100">
+                            <h6>1. Leaf Verification</h6>
+                            <p class="small mb-0">CNN model filters non-leaf images with 98.2% accuracy</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 alert alert-light h-100">
+                            <h6>2. Plant Identification</h6>
+                            <p class="small mb-0">11-class classifier using transfer learning</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 alert alert-light h-100">
+                            <h6>3. Disease Prediction</h6>
+                            <p class="small mb-0">ResNet50 + weather context analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <a href="index.html" class="btn btn-custom me-3">
+                <i class="fas fa-arrow-left me-2"></i> Back to Portfolio
+            </a>
+            <a href="https://github.com/AtharvaSamant4/SE_DIV_B_SEM4_24-25.git" 
+               class="btn btn-custom" 
+               target="_blank">
+                <i class="fab fa-github me-2"></i> View on GitHub
+            </a>
+            <a href="https://plant-disease-dl.onrender.com/" 
+               class="btn btn-custom" 
+               target="_blank">
+                <i class="fas fa-rocket me-2"></i> Live Demo Of Project
+            </a>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
